@@ -16,6 +16,7 @@ import {
 
 
 import { registerRootComponent } from 'expo';
+import Form from './Components/Form';
 
 registerRootComponent(App);
 
@@ -28,7 +29,7 @@ function App(): JSX.Element {
 
   return (
     <View style={Mystyles.container}>
-      <Text style={Mystyles.heading}>Type Something in the Input field Below, It will apear here...</Text>
+      {/* <Text style={Mystyles.heading}>Type Something in the Input field Below, It will apear here...</Text>
       <Text style={Mystyles.heading}>{txt}</Text>
       <View style={Mystyles.btn}>
         <TextInput style={Mystyles.inputField} placeholder='Type Something' onChangeText={(e)=>setTxt(e)} 
@@ -41,14 +42,15 @@ function App(): JSX.Element {
       </View>
       <View style={Mystyles.btn}>
         <Button title='Reset Input Field' onPress={()=>setTxt('')} />
-      </View>
-
+      </View> */}
+      <Form/>
     </View>
   );
 }
 
 const Mystyles = StyleSheet.create({
   container: {
+    backgroundColor: '#222',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
